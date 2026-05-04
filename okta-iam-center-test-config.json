@@ -1,0 +1,20 @@
+{
+  "description": "Test configuration for Okta through IAM Identity Center",
+  "provider": "okta",
+  "federation_type": "direct",
+  "okta": {
+    "domain": "trial-7699295.okta.com",
+    "client_id": "0oavc0me0woJI8YZK697",
+    "redirect_uri": "http://localhost:8400/callback",
+    "scopes": ["openid", "profile", "email"]
+  },
+  "aws": {
+    "region": "us-east-1",
+    "stack_base_name": "claude-code-okta-test"
+  },
+  "notes": {
+    "setup": "Using Okta as OIDC provider with Direct STS federation for IAM Identity Center testing",
+    "coworker_setup": "Main branch uses Cognito (direct IAM) - this branch tests Okta path",
+    "okta_guide": "See assets/docs/providers/okta-setup.md for full Okta configuration steps"
+  }
+}
